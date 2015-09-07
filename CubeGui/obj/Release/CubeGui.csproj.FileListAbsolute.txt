@@ -1,0 +1,8 @@
+C:\dylan\Development\CubeGui\CubeGui\bin\Release\CubeGui.exe.config
+C:\dylan\Development\CubeGui\CubeGui\bin\Release\CubeGui.exe
+C:\dylan\Development\CubeGui\CubeGui\bin\Release\CubeGui.pdb
+C:\dylan\Development\CubeGui\CubeGui\obj\Release\CubeGui.Form1.resources
+C:\dylan\Development\CubeGui\CubeGui\obj\Release\CubeGui.Properties.Resources.resources
+C:\dylan\Development\CubeGui\CubeGui\obj\Release\CubeGui.csproj.GenerateResource.Cache
+C:\dylan\Development\CubeGui\CubeGui\obj\Release\CubeGui.exe
+C:\dylan\Development\CubeGui\CubeGui\obj\Release\CubeGui.pdb
