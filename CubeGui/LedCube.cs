@@ -15,6 +15,8 @@ namespace CubeConnection
         Led all_leds;
         public Led target_led;
 
+        public Boolean connected = false;
+
         public LedCube() // constructor for LedCube Object
         {
             all_leds = new Led();
@@ -183,6 +185,7 @@ namespace CubeConnection
 
         public void close()
         {
+            all_off();
             serial_port.Close();
             serial_port = null;
         }
@@ -220,6 +223,7 @@ namespace CubeConnection
                     {
                         Console.WriteLine("Cube Found: OK");
                         temp_result = true;
+                        connected = true;
                         break;
                     }
 

@@ -11,50 +11,58 @@ using CubeConnection;
 
 namespace CubeGui
 {
-    public partial class Form1 : Form
+    public partial class frmCubeGui : Form
     {
         LedCube led_cube;
 
-        public Form1()
+        public frmCubeGui()
         {
             InitializeComponent();
             led_cube = new LedCube();
             if (!led_cube.open())
             {
-                textBox1.Text ="Open Cube: FAILED";
+                lblConnectionStatus.Text ="Open Cube: FAILED";
                 pnlConnectedStatus.BackColor = Color.Black;
             }
             else
             {
-                textBox1.Text = "Open Cube: OK";
+                lblConnectionStatus.Text = "Open Cube: OK";
                 pnlConnectedStatus.BackColor = Color.Blue;
             }
            
         }
 
-        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        private void nudRed_ValueChanged(object sender, EventArgs e)
         {
-            if (keyData == Keys.Up)
-            {
-                if (led_cube.blue >= 255)
-                    return true;
-                led_cube.blue = led_cube.blue + 1;
-                led_cube.all_colour(led_cube.red, led_cube.green, led_cube.blue);
-                lblColorInfo.Text = led_cube.ToString();
-                return true;
-            }
-
-            if (keyData == Keys.Down)
-            {
-                if (led_cube.blue<= 0)
-                    return true;
-                led_cube.blue = led_cube.blue - 1;
-                led_cube.all_colour(led_cube.red, led_cube.green, led_cube.blue);
-                lblColorInfo.Text = led_cube.ToString();
-                return true;
-            }
-            return base.ProcessCmdKey(ref msg, keyData);
+           
+            led_cube.red = (int) nudRed.Value;           
+            lblColorInfo.Text = led_cube.ToString();
+            if (led_cube.connected)
+               led_cube.all_colour(led_cube.red, led_cube.green, led_cube.blue);
         }
 
+        private void nudGreen_valuechanged(object sender, EventArgs e)
+        {
+            led_cube.green = (int)nudGreen.Value;
+            lblColorInfo.Text = led_cube.ToString();
+            if (led_cube.connected)
+                led_cube.all_colour(led_cube.red, led_cube.green, led_cube.blue);
+        }
+
+        private void nudBlue_ValueChanged(object sender, EventArgs e)
+        {
+            led_cube.blue = (int)nudBlue.Value;
+            lblColorInfo.Text = led_cube.ToString();
+            if (led_cube.connected)
+                led_cube.all_colour(led_cube.red, led_cube.green, led_cube.blue);
+
+        }
+
+        
+        private void frmCubeGui_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (led_cube.connected)
+                led_cube.close();
+        }
     }
 }

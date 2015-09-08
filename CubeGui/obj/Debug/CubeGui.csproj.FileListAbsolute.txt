@@ -2,8 +2,8 @@ C:\dylan\Development\CubeGui\CubeGui\bin\Debug\CubeGui.exe.config
 C:\dylan\Development\CubeGui\CubeGui\bin\Debug\CubeGui.exe
 C:\dylan\Development\CubeGui\CubeGui\bin\Debug\CubeGui.pdb
 C:\dylan\Development\CubeGui\CubeGui\obj\Debug\CubeGui.csprojResolveAssemblyReference.cache
-C:\dylan\Development\CubeGui\CubeGui\obj\Debug\CubeGui.Form1.resources
 C:\dylan\Development\CubeGui\CubeGui\obj\Debug\CubeGui.Properties.Resources.resources
 C:\dylan\Development\CubeGui\CubeGui\obj\Debug\CubeGui.csproj.GenerateResource.Cache
 C:\dylan\Development\CubeGui\CubeGui\obj\Debug\CubeGui.exe
 C:\dylan\Development\CubeGui\CubeGui\obj\Debug\CubeGui.pdb
+C:\dylan\Development\CubeGui\CubeGui\obj\Debug\CubeGui.frmCubeGui.resources
